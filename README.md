@@ -7,6 +7,8 @@ Here is a quick figma representation of it:
 https://www.figma.com/proto/2jvWGLGf51JZbBGiCuJYHL/Front-end-Developer-Test---Mockup?node-id=15%3A73&viewport=1235%2C373%2C0.2953214943408966&scaling=scale-down-width&page-id=0%3A1
 
 Information gets stored in the frontend within the following object:
+
+```
 {
   name: "My song",
   length: 60,
@@ -25,6 +27,7 @@ Information gets stored in the frontend within the following object:
     {"name":"Silence","duration":2},
   ]
 }
+```
 
 Params:
 - name: Name of the track (required)
