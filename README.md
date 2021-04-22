@@ -41,7 +41,7 @@ Features:
 - An API interface from which the frontend can request compilations.
 - The final outcome should be an audio file, not another compilation.
 - We need to be able to download the file.
-- Our frontend engineers will require some instructions over your solution, like some sort of quick API documentation
+- Our frontend engineers will require some instructions over your solution, like some sort of API documentation
 - This services will be used by millions, so it has to be scalable and good in terms of performance.
 
 Additional requirements:
