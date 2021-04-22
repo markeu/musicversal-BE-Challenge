@@ -1,4 +1,4 @@
-= musiversal backend challenge
+musiversal backend challenge
 
 In musiversal's mission we are looking to make anybody a music creator, assisting people to create music. Our users are now creating songs using a mini digital audio workstation.
 
