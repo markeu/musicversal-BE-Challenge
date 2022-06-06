@@ -20,12 +20,7 @@
         "type": "git",
         "url": "git+https://github.com/markeu/musicversal-BE-Challenge"
     },
-    "keywords": [
-        "stock",
-        "check_in",
-        "check_out",
-        "users"
-    ],
+    "keywords": [],
     "author": "Uche Mark",
     "license": "ISC",
     "bugs": {
@@ -53,7 +48,10 @@
         "http-errors": "^1.8.1",
         "joi": "^17.4.2",
         "nodemon": "^2.0.15",
-        "pino": "^6.3.2"
+        "pino": "^6.3.2",
+        "fluent-ffmpeg": "^2.1.2",
+        "music-metadata": "^7.8.3",
+        "nanoid": "^3.1.22"
     },
     "devDependencies": {
         "chai-http": "^4.3.0",

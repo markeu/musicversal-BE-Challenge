@@ -1,11 +1,12 @@
 
 import cors from 'cors';
+import path from 'path';
 import express from 'express';
 import expressPino from 'express-pino-logger';
 
 import logger from './logger';
-import { PORT } from './config/constants'
-// import routes from './routes';
+import routes from './routes';
+import { PORT, CONFIG, URL } from './config/constants'
 
 
 export class SetupServer {
@@ -44,6 +45,15 @@ export class SetupServer {
                 origin: '*',
             })
         );
+        this.app.use(
+            CONFIG.SAMPLE.SERVE_URL,
+            express.static(path.resolve(CONFIG.SAMPLE.FOLDER))
+          );
+          
+          this.app.use(
+            CONFIG.TRACK.SERVE_URL,
+            express.static(path.resolve(CONFIG.TRACK.FOLDER))
+          );
     }
 
     setupControllers() {
@@ -52,7 +62,7 @@ export class SetupServer {
                 message: 'Welcome to Musicversal Backend Challenge',
             })
         );
-        // this.app.use('/v1.0/api', routes);
+        this.app.use(URL.DEFAULT, routes);
         this.app.all('*', (req, res) => res.send({ message: 'route not found' }));
     }
 

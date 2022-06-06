@@ -12,6 +12,7 @@ export const SILENCE_FILE = "Silence.mp3";
 
 export const URL = {
   SAVE: "/save-track",
+  DEFAULT: '/v1.0/api'
 };
 
 export const EXIST_STATUS = {
@@ -22,12 +23,10 @@ export const EXIST_STATUS = {
 export const EXIT_SIGNAL = ['SIGINT', 'SIGTERM', 'SIGQUIT'];
 export const CONFIG = {
   [FEATURE_NAME.SAMPLE]: {
-    FETCH_URL: "/audio-list",
-    SERVE_URL: "/audio",
+    SERVE_URL: "/audios",
     FOLDER: `${DATA_FOLDER}audios`,
   },
   [FEATURE_NAME.TRACK]: {
-    FETCH_URL: "/track-list",
     SERVE_URL: "/tracks",
     FOLDER: `${DATA_FOLDER}tracks`,
   },
