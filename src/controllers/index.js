@@ -46,6 +46,7 @@ export const downloadCompilation = async(req, res) => {
     try {
         const { title } = req.query;
         const file = downloadAudioFile(title);
+        
         res.download(file);
     } catch (error) {
         next(err)

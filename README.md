@@ -1,10 +1,6 @@
-musiversal backend challenge
+Musiversal Backend Challenge
 
 In musiversal's mission we are looking to make anybody a music creator, assisting people to create music. Our users are now creating songs using a mini digital audio workstation.
-
-Here is a quick figma representation of it:
-
-https://www.figma.com/proto/2jvWGLGf51JZbBGiCuJYHL/Front-end-Developer-Test---Mockup?node-id=15%3A73&viewport=1235%2C373%2C0.2953214943408966&scaling=scale-down-width&page-id=0%3A1
 
 Information gets stored in the frontend within the following object:
 
@@ -37,18 +33,44 @@ Params:
 
 We want to provide our users the ability to download this compilations. For that we have to create a service, that will allow us to compile the song and download it from the frontend.
 
-Features:
-- An API interface from which the frontend can request compilations.
-- The final outcome should be an audio file, not another compilation.
-- We need to be able to download the file.
-- Our frontend engineers will require some instructions over your solution, like some sort of API documentation
-- This services will be used by millions, so it has to be scalable and good in terms of performance.
+### REST API Docs
 
-Additional requirements:
-- We are open in terms of how you want to design the solution and how you want to define the endpoints.
-- You can use NodeJS, Python or other technology as long as you explain us why in the readme.
-- We need a README.md with launch/setup instructions, any technical choices you have made (which ones and why), additional features/technologies you added and why, known bugs and/or features/technologies that would like to add into this service.
-- Upload the code into a github/gitlab repo.
-- Some basic knowledge on unit tests is required. It doesn't mean you everything has to be tested, but we want to know you know your way around tests.
-- You can use any open source libraries as long as you specify why in the readme.
-- If you have any additional question please send us an email.
+[Challenge documentation link](https://documenter.getpostman.com/view/12448738/Uz5KjZ8m)
+
+### Required Features
+
+```
+User can create compilation.
+User can get all saved compliation.
+User can download saved compilation.
+User can get all sample audio files.
+
+```
+
+Put your samples to **./data/audios** directory
+Expect to find merged tracks in **./data/tracks** directory
+
+**IMPORTANT NOTICE**
+API using utility **ffmpeg** .
+(Fast Forward MPEG) An open source multimedia project for working with audio and video. Based on the "libavcodec" A/V codec library and "libavformat". FFmpeg can handle the entire process of transcoding, video and image manipulation (resizing, denoising, etc.), packaging, multiplexing framework,  streaming and playback.
+
+##This is mandatory requirement must be installed first.##
+You can download static builds of ffmpeg from [here](https://johnvansickle.com/ffmpeg/). If you are lucky to use brew on MacOS, just run:
+### `brew install ffmpeg`
+
+Please, install dependencies before using.
+### `yarn`
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start:dev`
+
+Runs the app in the development mode.
+The page will reload if you make edits.
+You will also see any lint errors in the console. \
+Open [http://localhost:3001](http://localhost:3001) to test the endpoints on postman (referencing the documentation).
+
+
+
