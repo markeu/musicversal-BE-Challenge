@@ -9,7 +9,6 @@ We want to provide our users the ability to download this compilations. For that
 [Challenge documentation link](https://documenter.getpostman.com/view/12448738/Uz5KjZ8m)
 
 ### Required Features
-
 ```
 User can create compilation.
 User can get all saved compliation.
@@ -42,6 +41,11 @@ Runs the app in the development mode.
 The page will reload if you make edits.
 You will also see any lint errors in the console. \
 Open [http://localhost:3001](http://localhost:3001) to test the endpoints on postman (referencing the documentation).
+
+### `yarn test`
+
+Launches the test runner.\
+
 
 
 
