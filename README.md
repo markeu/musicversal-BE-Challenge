@@ -2,35 +2,6 @@ Musiversal Backend Challenge
 
 In musiversal's mission we are looking to make anybody a music creator, assisting people to create music. Our users are now creating songs using a mini digital audio workstation.
 
-Information gets stored in the frontend within the following object:
-
-```
-{
-  name: "My song",
-  length: 60,
-  parts: [
-    {"name":"Vocals","duration":11},
-    {"name":"Bass","duration":3.3},
-    {"name":"Drums","duration":3.3},
-    {"name":"Silence","duration":2},
-    {"name":"Hammond","duration":3.3},
-    {"name":"Silence","duration":2},
-    {"name":"Silence","duration":2},
-    {"name":"Silence","duration":2},
-    {"name":"Silence","duration":2},
-    {"name":"Silence","duration":2},
-    {"name":"Silence","duration":2},
-    {"name":"Silence","duration":2},
-  ]
-}
-```
-
-Params:
-- name: Name of the track (required)
-- length: Length fo the full compilation (required)
-- parts: order of the parts
-- each part has a name (assigned to an audio file) and a duration (depending on how long that audio should be played). If the audio is longer than the number of parts, we assume the rest is silence and we cut if it is the other way around.
-
 We want to provide our users the ability to download this compilations. For that we have to create a service, that will allow us to compile the song and download it from the frontend.
 
 ### REST API Docs
