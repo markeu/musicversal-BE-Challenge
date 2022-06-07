@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import http from 'http';
 import { nanoid } from "nanoid";
 import { promisify } from "util";
 import ffmpeg from "fluent-ffmpeg";
@@ -122,4 +123,8 @@ export const mergeTrack = (compilationArray, newName) => {
       })
       .mergeToFile(CONFIG[FEATURE_NAME.TRACK].FOLDER + `/${newName}.mp3`, {end: true});
     });
+};
+
+export const downloadAudioFile = (title) => {
+  return  CONFIG[FEATURE_NAME.TRACK].FOLDER + `/${title}.mp3`
 };

@@ -1,5 +1,5 @@
 import { FEATURE_NAME } from "../config/constants";
-import { scanFolder, prepareMergeData, mergeTrack } from '../services';
+import { scanFolder, prepareMergeData, mergeTrack, downloadAudioFile } from '../services';
 
 
 export const getTrackAudio = async (req, res) => {
@@ -33,3 +33,10 @@ export const createCompilation = async(req, res) => {
       res.sendStatus(500);
     }
 }
+
+export const downloadCompilation = async(req, res) => {
+    const { title } = req.query;
+    const file = downloadAudioFile(title);
+    res.download(file); 
+}
+
