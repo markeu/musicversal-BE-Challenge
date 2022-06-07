@@ -1,7 +1,7 @@
 export class HttpError extends Error {
   constructor(status, message, data = {}) {
     super(message);
-    this.name = 'HttpError';
+    this.name = "HttpError";
     this.status = status;
     this.data = data;
   }
@@ -11,7 +11,7 @@ export class HttpError extends Error {
       error: this.message,
     };
     if (this.data) {
-      respObj['data'] = this.data;
+      respObj["data"] = this.data;
     }
     return res.status(this.status).json(respObj);
   }

@@ -1,13 +1,9 @@
-import { SetupServer } from './server';
-import {  
-  PORT,
-  EXIT_SIGNAL,
-  EXIST_STATUS,
-  } from './config/constants'
-import logger from './logger';
+/* eslint-disable no-undef */
+import logger from "./logger";
+import { SetupServer } from "./server";
+import { PORT, EXIT_SIGNAL, EXIST_STATUS } from "./config/constants";
 
-
-process.on('unhandledRejection', (reason, promise) => {
+process.on("unhandledRejection", (reason, promise) => {
   logger.error(
     `App exiting due to an unhandled promise: ${promise} and reason: ${reason}`
   );
@@ -15,7 +11,7 @@ process.on('unhandledRejection', (reason, promise) => {
   throw reason;
 });
 
-process.on('uncaughtException', (error) => {
+process.on("uncaughtException", (error) => {
   logger.error(`App exiting due to an uncaught exception: ${error}`);
   process.exit(EXIST_STATUS.FAILURE);
 });
@@ -26,7 +22,6 @@ process.on('uncaughtException', (error) => {
     await server.init();
     server.start();
 
-   
     for (const exitSignal of EXIT_SIGNAL) {
       process.on(exitSignal, async () => {
         try {

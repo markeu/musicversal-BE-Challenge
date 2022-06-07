@@ -1,8 +1,7 @@
-
 export const FEATURE_NAME = {
-  TRACK : "TRACK",
-  SAMPLE : "SAMPLE",
-}
+  TRACK: "TRACK",
+  SAMPLE: "SAMPLE",
+};
 
 export const DATA_FOLDER = "data/";
 
@@ -12,8 +11,8 @@ export const SILENCE_FILE = "Silence.mp3";
 
 export const URL = {
   SAVE: "/save-track",
-  DEFAULT: '/v1.0/api',
-  DOWNLOAD: '/download'
+  DEFAULT: "/v1.0/api",
+  DOWNLOAD: "/download",
 };
 
 export const EXIST_STATUS = {
@@ -21,7 +20,7 @@ export const EXIST_STATUS = {
   SUCCESS: 0,
 };
 
-export const EXIT_SIGNAL = ['SIGINT', 'SIGTERM', 'SIGQUIT'];
+export const EXIT_SIGNAL = ["SIGINT", "SIGTERM", "SIGQUIT"];
 export const CONFIG = {
   [FEATURE_NAME.SAMPLE]: {
     SERVE_URL: "/audios",

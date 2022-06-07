@@ -1,6 +1,6 @@
-import Joi from 'joi';
+import Joi from "joi";
 
-export const downloadSchema ={
+export const downloadSchema = {
   title: Joi.string().required(),
 };
 
@@ -12,4 +12,3 @@ export const compilationSchema = {
     duration: Joi.number().required(),
   }),
 };
-
