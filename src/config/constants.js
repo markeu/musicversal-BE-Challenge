@@ -12,7 +12,8 @@ export const SILENCE_FILE = "Silence.mp3";
 
 export const URL = {
   SAVE: "/save-track",
-  DEFAULT: '/v1.0/api'
+  DEFAULT: '/v1.0/api',
+  DOWNLOAD: '/download'
 };
 
 export const EXIST_STATUS = {

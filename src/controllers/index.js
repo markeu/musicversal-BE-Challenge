@@ -3,19 +3,27 @@ import { scanFolder, prepareMergeData, mergeTrack, downloadAudioFile } from '../
 
 
 export const getTrackAudio = async (req, res) => {
-    const tracks = await scanFolder(
-        FEATURE_NAME.TRACK
-      );
-    
-      res.json(tracks);
+    try {
+        const tracks = await scanFolder(
+            FEATURE_NAME.TRACK
+          );
+        
+          res.json(tracks);
+    } catch (error) {
+        next(err)
+    }
 };
 
 export const getSampleAudio = async (req, res) => {
-    const samples = await scanFolder(
-        FEATURE_NAME.SAMPLE
-      );
-    
-      res.json(samples);
+    try {
+        const samples = await scanFolder(
+            FEATURE_NAME.SAMPLE
+          );
+        
+          res.json(samples);
+    } catch (error) {
+        next(err)
+    } 
 };
 
 export const createCompilation = async(req, res) => {
@@ -30,13 +38,17 @@ export const createCompilation = async(req, res) => {
   
       res.json(newTrackName);
     } catch (err) {
-      res.sendStatus(500);
+     next(err)
     }
 }
 
 export const downloadCompilation = async(req, res) => {
-    const { title } = req.query;
-    const file = downloadAudioFile(title);
-    res.download(file); 
+    try {
+        const { title } = req.query;
+        const file = downloadAudioFile(title);
+        res.download(file);
+    } catch (error) {
+        next(err)
+    }    
 }
 
