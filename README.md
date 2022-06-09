@@ -38,8 +38,8 @@ In the project directory, you can run:
 ### `yarn start:dev`
 
 Runs the app in the development mode.
-The page will reload if you make edits.
-You will also see any lint errors in the console. \
+The page reloads on edits.
+You will likewise see any lint errors when the test suites runs. \
 Open [http://localhost:3001](http://localhost:3001) to test the endpoints on postman (referencing the documentation).
 
 ### `yarn test`
